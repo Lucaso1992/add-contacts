@@ -25,9 +25,6 @@ const EditView = () => {
 
   const handleOnEditSubmit = async (e) => {
     e.preventDefault();
-    // if (!userInput.email || !userInput.full_name || !userInput.agenda_slug || !userInput.address || !userInput.phone) {
-    //   return alert('Fill in the gaps correctly please!');
-    // }
   
     try {
       await updateContact(userInput, selectedContact);
