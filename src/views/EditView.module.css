@@ -10,3 +10,13 @@
     flex-direction: column;
      
 }
+
+.edit_back_button{
+    background-color: rgb(137, 50, 50);
+    color: whitesmoke;
+}
+
+.edit_back_button:hover{
+    background-color: rgba(132, 29, 29, 0.708);
+    color: white;
+}

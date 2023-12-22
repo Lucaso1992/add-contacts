@@ -31,23 +31,21 @@ const ContactCard = ({ name, email, address, phone, id }) => {
     }
     return (
         <div className={`${styles.contact_cards} card mb-3`}>
-            <div className={`${styles.content_cards} g-0 d-flex row justify-content-between`}>
-                <div className={`${styles.img_container} col-md-4`}>
+                <div className={`${styles.img_container}`}>
                     <img src="https://i.ibb.co/txSLyvk/person-1.png" className={`${styles.img}  img-fluid `} alt="..." />
                 </div>
-                <div className="col-md-8 d-flex flex-row">
+                <div className={`${styles.info_container} col-8 col-md-8`}>
                     <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
+                        <h5 className="card-title"><strong>{name}</strong></h5>
                         <p className="card-text">{email}</p>
                         <p className="card-text">{address}</p>
                         <p className="card-text">{phone}</p>
                     </div>
-                    <div>
-                        <GrEdit className={`${styles.button_edit} mx-4`} onClick={() => handleEdit(id)}></GrEdit>
-                        <MdDelete onClick={() => handleDelete()} className={`${styles.button_delete} mx-4`}></MdDelete>
+                    <div className={styles.icons_div}>
+                        <GrEdit className={styles.button_edit} onClick={() => handleEdit(id)}></GrEdit>
+                        <MdDelete onClick={() => handleDelete()} className={styles.button_delete}></MdDelete>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

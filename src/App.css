@@ -1,4 +1,8 @@
 body{
     min-height: 100vh;
-    background-color: rgba(222, 191, 96, 0.171);
+    background: linear-gradient(to right, #b6986480, #8e600a83); 
+}
+
+h1{
+    color: black;
 }

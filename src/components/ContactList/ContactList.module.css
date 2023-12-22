@@ -1,3 +1,10 @@
 .add_button{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.189);
+    background-color: rgb(137, 50, 50);
+    color: whitesmoke;
+}
+
+.add_button:hover{
+    background-color: rgba(132, 29, 29, 0.708);
+    color: white;
 }

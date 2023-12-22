@@ -58,7 +58,7 @@ const EditView = () => {
         <input className="mt-4" type="submit" value={"Enviar"}/>
         </form>
 
-        <Link to={'/'} className='btn btn-primary mt-4'>Go back to Contacts!</Link>
+        <Link to={'/'} className={`${styles.edit_back_button} btn mt-4`}>Go back to Contacts!</Link>
     </div>
   );
 }

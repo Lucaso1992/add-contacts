@@ -29,7 +29,7 @@ const ContactList = () => {
 
     return (
         <div className='d-flex flex-column justify-content-center container'>
-            <Link className={`${styles.add_button} btn btn-primary ms-auto mt-3`} to={'/form'}>Add Contact</Link>
+            <Link className={`${styles.add_button} btn ms-auto mt-3`} to={'/form'}>Add Contact</Link>
             {contactList.length >= 1 ?
                 contactList.map((e, index) => <ContactCard key={index} name={e.full_name}
                     email={e.email} address={e.address} phone={e.phone} id={e.id} />) : <h1 className='text-center mt-4'><strong> Add your contacts!</strong></h1>}
