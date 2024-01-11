@@ -57,7 +57,7 @@ const Form = () => {
         <label htmlFor="phone">Phone</label>
         <input id="phone" type="number" value={store.userInput.phone} onChange={handleInput} name='phone' placeholder='phone' />
 
-        <input className="mt-4" type="submit" value={"Enviar"} />
+        <input className="mt-4" type="submit" value={"Send"} />
       </form>
 
       <Link to={'/'} className={`${styles.back_contacts} btn  mt-4`}>Go back to Contacts!</Link>
