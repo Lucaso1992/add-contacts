@@ -7,7 +7,6 @@ const deleteContact = async (id) => {
             }
         });
         if (resp.status !== 200) {
-            alert("Theres been an error while eliminating contact");
         }
         return await resp.json();
     } catch (error) {
