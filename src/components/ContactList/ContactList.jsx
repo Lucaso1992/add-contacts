@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import getContacts from '../../services/getContacts';
 import useAppContext from "../../context/AppContext";
 import ContactCard from '../ContactCard/ContactCard.jsx';
+import createAgenda from '../../services/createAgenda.js';
 
 import styles from './ContactList.module.css';
 
-let userName = prompt("Whats your User Name?");
+// let userName = prompt("Whats your User Name?");
 
 const ContactList = () => {
     const { store, actions } = useAppContext();
@@ -17,12 +18,13 @@ const ContactList = () => {
     useEffect(() => {
         const fetchContacts = async () => {
             try {
-                const contacts = await getContacts(userName);
-                setContactList(contacts);
+                const contacts = await getContacts();
+                setContactList(contacts.contacts);
             } catch (error) {
                 console.error("Error:" + error);
             }
         };
+        createAgenda()
         fetchContacts();
         setUserInput({});
     }, [contactElimination]);

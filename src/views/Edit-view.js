@@ -41,19 +41,18 @@ const EditView = () => {
         <h1 className='text-center'><strong> Edit Contact</strong></h1>
         <form className={styles.form_edition} onSubmit={handleOnEditSubmit}>
         <label htmlFor="full_name">Full Name</label>
-        <input id={`full_name_`} value={store.userInput.full_name} onChange={handleInput} name='full_name' type="text" placeholder= 'Full Name'/>
+        <input id={`full_name_`} value={store.userInput.name} onChange={handleInput} name='name' type="text" placeholder= 'Full Name'/>
+       
+        <label htmlFor="phone">Phone</label>
+        <input id="phone" type="number" value={store.userInput.phone} onChange={handleInput} name='Phone' placeholder=''/>
 
         <label htmlFor="email"> Email</label>
         <input id="email" value={store.userInput.email} onChange={handleInput} name='email' type="text" placeholder='Email'/>
 
-        <label htmlFor="agenda_slug">User Name</label>
-        <input id="agenda_slug" type="text" value={store.userInput.agenda_slug} onChange={handleInput} name='User Name' placeholder= ''/>
 
         <label htmlFor="address">Address</label>
         <input id="address" type="text" value={store.userInput.address} onChange={handleInput} name='Address' placeholder=''/>
 
-        <label htmlFor="phone">Phone</label>
-        <input id="phone" type="number" value={store.userInput.phone} onChange={handleInput} name='Phone' placeholder=''/>
 
         <input className="mt-4" type="submit" value={"Send"}/>
         </form>

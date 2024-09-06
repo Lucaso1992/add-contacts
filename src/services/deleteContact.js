@@ -1,6 +1,6 @@
 const deleteContact = async (id) => {
     try {
-        const resp = await fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+        const resp = await fetch(`https://playground.4geeks.com/contact/agendas/lucasss/contacts/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

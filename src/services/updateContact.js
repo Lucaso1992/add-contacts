@@ -1,6 +1,6 @@
 const updateContact = (data, id) => {
     return(
-        fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+        fetch(`https://playground.4geeks.com/contact/agendas/lucasss/contacts/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

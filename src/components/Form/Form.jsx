@@ -29,7 +29,7 @@ const Form = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    if (!userInput.email || !userInput.full_name || !userInput.agenda_slug || !userInput.address || !userInput.phone) {
+    if (!userInput.email || !userInput.name || !userInput.address || !userInput.phone) {
       return alert('Fill in the gaps correctly please!');
     }
     createContact(userInput);
@@ -43,19 +43,17 @@ const Form = () => {
       <h1 className='text-center'><strong>Add New Contact</strong></h1>
       <form onSubmit={handleOnSubmit}>
         <label htmlFor="full_name">Full Name</label>
-        <input id='full_name' value={store.userInput.full_name} onChange={handleInput} name='full_name' type="text" placeholder='full name' />
+        <input id='name' value={store.userInput.full_name} onChange={handleInput} name='name' type="text" placeholder='full name' />
+
+        <label htmlFor="phone">Phone</label>
+        <input id="phone" type="number" value={store.userInput.phone} onChange={handleInput} name='phone' placeholder='phone' />
 
         <label htmlFor="email"> Email</label>
         <input id="email" value={store.userInput.email} onChange={handleInput} name='email' type="text" placeholder='email' />
 
-        <label htmlFor="agenda_slug">User Name</label>
-        <input id="agenda_slug" type="text" value={store.userInput.agenda_slug} onChange={handleInput} name='agenda_slug' placeholder='user name' />
-
         <label htmlFor="address">Address</label>
         <input id="address" type="text" value={store.userInput.address} onChange={handleInput} name='address' placeholder='address' />
 
-        <label htmlFor="phone">Phone</label>
-        <input id="phone" type="number" value={store.userInput.phone} onChange={handleInput} name='phone' placeholder='phone' />
 
         <input className="mt-4" type="submit" value={"Send"} />
       </form>

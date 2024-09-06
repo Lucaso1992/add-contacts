@@ -1,6 +1,6 @@
-const getContacts = async (user_name) => {
+const getContacts = async () => {
     try {
-        const resp = await fetch(`https://playground.4geeks.com/apis/fake/contact/agenda/${user_name}`, {
+        const resp = await fetch('https://playground.4geeks.com/contact/agendas/lucasss/contacts', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
