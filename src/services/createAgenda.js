@@ -11,7 +11,7 @@ const createAgenda = () => {
             if(resp.status===400){
                 
             }
-            else if(resp.status!==201){
+            else if(resp.status!==200){
                 
             }
             else return true;
