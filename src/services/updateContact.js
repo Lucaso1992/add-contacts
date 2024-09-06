@@ -13,7 +13,7 @@ const updateContact = (data, id) => {
             if(resp.status===400){
                 alert("Theres been an error in the user data");
             }
-            else if(resp.status!==201){
+            else if(resp.status!==200){
                 alert("There has been an error while creating user");
             }
             else return true;

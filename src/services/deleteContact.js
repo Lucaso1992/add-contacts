@@ -6,7 +6,7 @@ const deleteContact = async (id) => {
                 'Content-Type': 'application/json'
             }
         });
-        if (resp.status !== 201) {
+        if (resp.status !== 200) {
             alert("Theres been an error while eliminating contact");
         }
         return await resp.json();
