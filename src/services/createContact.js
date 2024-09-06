@@ -14,7 +14,6 @@ const createContact = (data) => {
                 alert("Theres been an error in the user data");
             }
             else if(resp.status!==200){
-                alert("There has been an error while creating user");
             }
             else return true;
         })
